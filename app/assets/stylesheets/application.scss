@@ -14,5 +14,23 @@
  *= require_self
  */
 
-@import "bootstrap-sprockets"
-@import "bootstrap"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+footer {
+  width: 100%;
+  border-top: 1px solid #ddd;
+
+  .container {
+    padding-top: 15px;
+    padding-left: 10px;
+  }
+
+  span {
+    color: #222;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  
+}

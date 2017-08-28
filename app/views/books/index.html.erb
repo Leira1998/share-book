@@ -5,12 +5,10 @@
 <ul class="media-list">
 <% @books.each do |book| %>
   <li class="media">
-    <div class="media-left">
-      <%= link_to image_tag(book.image.url(:thumb), class: "media-object"), book_path(book), class: '' %>
-    </div>
+    <%= link_to image_tag(book.image.url, class: "media-object"), book_path(book), class: '' %>
   </li>
 <% end %>
   <li class="media">
-    <%= link_to "New Book", new_book_path, class: '' %>
+    <%= link_to "New Book", new_book_path, class: "media-object" %>
   </li>
 </ul>

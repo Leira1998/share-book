@@ -8,11 +8,6 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
   end
 
-  def download_image
-    @book = Book.find(params[:id])
-    send_data @book.image, filename: "#{@book.title}.png", type: "image/png"
-  end
-
   def new
     @book = Book.new
   end

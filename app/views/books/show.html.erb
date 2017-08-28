@@ -2,6 +2,7 @@
   <div class="media-left">
     <%= link_to image_tag(@book.image.url, class: "media-object"), @book.image.url, target: '_blank' %>
     <h4 class="media-heading"><%= @book.title %></h4>
+    <%= link_to "Edit", edit_book_path(@book), class: 'btn btn-primary' %>
     <%= link_to "Delete Book", book_path(@book), class: 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %>
   </div>
 </div>

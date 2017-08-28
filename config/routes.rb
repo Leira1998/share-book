@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'books#index'
   get '/about', to: 'pages#about'
 
-  get '/books', to: 'books#index'
+  # get '/books', to: 'books#index'
   get '/books/:id', to: 'books#show'
   get '/books/new', to: 'books#new'
   post '/books', to: 'books#create'
