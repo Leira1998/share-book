@@ -19,12 +19,18 @@
     </nav>
   </header>
   <main>
+    <div class="container">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>">
+          <%= value %>
+        </div>
+      <% end %>
 
-    <%= yield %>
-
+      <%= yield %>
+    </div>
   </main>
   <footer>
-
+    <p>Fernando</p>
   </footer>
 </body>
 </html>

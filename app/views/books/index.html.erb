@@ -1,0 +1,16 @@
+<div class="page-header">
+  <h1>Books</h1>
+</div>
+
+<ul class="media-list">
+<% @books.each do |book| %>
+  <li class="media">
+    <div class="media-left">
+      <%= link_to image_tag(book.image.url(:thumb), class: "media-object"), book_path(book), class: '' %>
+    </div>
+  </li>
+<% end %>
+  <li class="media">
+    <%= link_to "New Book", new_book_path, class: '' %>
+  </li>
+</ul>

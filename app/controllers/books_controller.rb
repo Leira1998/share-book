@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
 
   def index
-    @book = Book.all
+    @books = Book.order('created_at')
   end
 
   def show
@@ -10,7 +10,7 @@ class BooksController < ApplicationController
 
   def download_image
     @book = Book.find(params[:id])
-    send_data @book.image, filename: "#{@book.title}.jpg", type: "image/jpg"
+    send_data @book.image, filename: "#{@book.title}.png", type: "image/png"
   end
 
   def new
@@ -50,7 +50,7 @@ class BooksController < ApplicationController
 
   private
   def book_params
-    params.require(:book).permit(:id, :title, :body, :image)
+    params.require(:book).permit(:title, :body, :image)
   end
 
 end

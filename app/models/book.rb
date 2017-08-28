@@ -1,4 +1,8 @@
 class Book < ApplicationRecord
-  has_attached_file :image, url: "/style/:hash.:extension", hash_secret: "abc123", style: { small: "64x64", med: "100x100", large: "200x200" }
-  validates_attachment :image, :content_type => { :content_type => "image/jpg" }
+  has_attached_file :image,
+    url: "/img/:hash.:extension",
+    hash_secret: "abc123",
+    style: { thumb: ["64x64#", :png], original: ["500x500>", :jpg] }
+  validates_attachment :image,
+    :content_type => { :content_type => ["image/jpg", "image/jpeg", "image/gif", "image/png"] }
 end
