@@ -1,8 +1,19 @@
-<div class="media">
-  <div class="media-left">
-    <%= link_to image_tag(@book.image.url, class: "media-object"), @book.image.url, target: '_blank' %>
-    <h4 class="media-heading"><%= @book.title %></h4>
-    <%= link_to "Edit", edit_book_path(@book), class: 'btn btn-primary' %>
+<div class="page-header">
+  <h1><%= @book.title %></h1>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="media">
+      <%= image_tag(@book.document.url(:thumb), alt: "Document")  %>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <p>Author: <%= @book.author %></p>
+    <p>Class: <%= @book.classname %></p>
+    <p>Edition: <%= @book.edition %></p>
+    <br />
+    <%= link_to "Download Document", @book.document.url, target: '_blank' %>
+    <br />
     <%= link_to "Delete Book", book_path(@book), class: 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %>
   </div>
 </div>
