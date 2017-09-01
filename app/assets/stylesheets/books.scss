@@ -2,10 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.media-object {
-  width: 200px;
-  height: auto;
+.doc {
+  padding: 10px;
+
+  .doc-thumb {
+    width: 350px;
+    height: auto;
+  }
+
+  .doc-title {
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: "Arial";
+    font-weight: bold;
+    color: #222;
+    text-align: center;
+  }
 }
+
 
 @media only screen and (max-width: 800px) {
   .media-object {

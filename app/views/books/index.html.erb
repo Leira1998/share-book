@@ -2,12 +2,21 @@
   <h1>Books</h1>
 </div>
 
-<ul class="media-list">
+<div class="row">
 <% @books.each do |book| %>
-
-  <%= link_to book.title, book_path(book) %>
+  <div class="col-md-4">
+  <%= link_to book_path(book) do %>
+    <div class="doc">
+      <%= image_tag(book.document.url, alt: "Document", class: 'doc-thumb') %>
+      <br />
+      <p class="doc-title"><%= book.title %></p>
+    </div>
+  <% end %>
+</div>
 <% end %>
-  <li class="media">
-    <%= link_to "New Book", new_book_path, class: "media-object" %>
-  </li>
-</ul>
+  <div class="col-md-4">
+    <div id="new-doc" class="doc">
+      <%= link_to "New Book", new_book_path, class: "media-object" %>
+    </div>
+  </div>
+</div>
