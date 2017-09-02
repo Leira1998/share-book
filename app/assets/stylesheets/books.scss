@@ -3,11 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .doc {
+  display: block;
   padding: 10px;
 
   .doc-thumb {
-    width: 350px;
+    width: 100%;
     height: auto;
+    max-height: 425px;
   }
 
   .doc-title {
@@ -20,9 +22,37 @@
   }
 }
 
+.new-doc {
+  padding: 200px 0px;
+  width: 100%;
+  max-height: 550px;
+  border: 2px dashed #ccc;
+  text-align: center;
+  font-size: 18.5px;
+  color: #222;
+}
 
-@media only screen and (max-width: 800px) {
-  .media-object {
+.new-doc:hover {
+  opacity: .8;
+}
+
+.doc-show {
+  width: 100%;
+  max-height: 550px;
+  padding: 10px;
+
+  img {
     width: 100%;
+    max-height: 550px;
   }
+}
+
+.doc-info {
+  width: 100%;
+  padding: 25px 20px;
+}
+
+
+@media only screen and (max-width: 950px) {
+
 }

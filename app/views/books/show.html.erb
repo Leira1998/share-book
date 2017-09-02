@@ -3,16 +3,18 @@
 </div>
 <div class="row">
   <div class="col-md-6">
-    <div class="media">
-      <%= image_tag(@book.document.url(:medium), alt: "Document")  %>
+    <div class="doc-show">
+      <%= image_tag(@book.document.url, alt: "Document")  %>
     </div>
   </div>
   <div class="col-md-6">
-    <p>Author: <%= @book.author %></p>
-    <p>Class: <%= @book.classname %></p>
-    <p>Edition: <%= @book.edition %></p>
-    <br />
-    <%= link_to "Download Document", @book.document.url, class: 'btn btn-primary', target: '_blank' %>
-    <%= link_to "Delete Book", book_path(@book), class: 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %>
+    <div class="doc-info">
+      <p>Author: <%= @book.author %></p>
+      <p>Class: <%= @book.classname %></p>
+      <p>Edition: <%= @book.edition %></p>
+      <br />
+      <%= link_to "Download Document", @book.document.url, class: 'btn btn-primary', target: '_blank' %>
+      <%= link_to "Delete Book", book_path(@book), class: 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %>
+    </div>
   </div>
 </div>

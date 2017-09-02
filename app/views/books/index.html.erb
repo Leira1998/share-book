@@ -15,8 +15,15 @@
 </div>
 <% end %>
   <div class="col-md-4">
-    <div id="new-doc" class="doc">
-      <%= link_to "New Book", new_book_path, class: "media-object" %>
+    <div class="doc">
+    <%= link_to new_book_path do %>
+      <div class="new-doc">
+        <span class="glyphicon glyphicon-plus-sign"></span>
+        <p>
+          Add your own Book
+        </p>
+      </div>
+    <% end %>
     </div>
   </div>
 </div>
