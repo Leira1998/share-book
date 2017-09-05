@@ -42,8 +42,12 @@
   padding: 10px;
 
   img {
-    width: 100%;
+    position: relative;
+    left: 50%;
+    margin-left: -200px;
+    width: 400px;
     max-height: 550px;
+    border: 1px solid #888;
   }
 }
 

@@ -1,19 +1,16 @@
 <div class="page-header">
-  <h1>Results for query</h1>
+  <h1>Results for "<%= :query %>"</h1>
 </div>
 <div class="row">
-<%= @books.each do |b| %>
-<div class="col-md-6">
-  <div class="doc-show">
-    <%= image_tag(b.document.url, alt: "Document")  %>
-  </div>
-</div>
-<div class="col-md-6">
-  <div class="doc-info">
-    <p>Author: <%= b.author %></p>
-    <p>Class: <%= b.classname %></p>
-    <p>Edition: <%= b.edition %></p>
-  </div>
+<% @books.each do |book| %>
+  <div class="col-md-4">
+  <%= link_to book_path(book) do %>
+    <div class="doc">
+      <%= image_tag(book.document.url, alt: "Document", class: 'doc-thumb') %>
+      <br />
+      <p class="doc-title"><%= book.title %></p>
+    </div>
+  <% end %>
 </div>
 <% end %>
 </div>

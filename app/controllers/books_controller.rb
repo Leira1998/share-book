@@ -44,7 +44,7 @@ class BooksController < ApplicationController
   end
 
   def search
-    @books = Book.filter(params[:query])
+    @books = Book.where("title LIKE ?", "%#{params[:query]}")
   end
 
   private

@@ -7,7 +7,6 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
-
 <body>
   <header>
     <nav class="navbar">
@@ -15,15 +14,11 @@
         <div class="navbar-header">
           <a href="/books" class="navbar-brand">Share Book</a>
         </div>
-        <%= form_tag('search_book_path', method: :search) do |f| %>
-          <div class="input-group">
-            <span class="input-group-btn">
-              <%= button_tag(type: 'submit', class: "btn btn-default") do %>
-                <span class="glyphicon glyphicon-search"></span>
-              <% end %>
-            </span>
+        <%= form_tag({controller: "books", action: "search"}, method: "get", class: "search-form") do %>
+          <div class="search-group">
+            <%= text_field_tag (:query) %>
+            <%= submit_tag "Search" %>
           </div>
-          <%= f.text_field_tag :query, params[:query], class: 'form-control', placeholder: 'Search books' %>
         <% end %>
       </div>
     </nav>
@@ -35,13 +30,12 @@
           <%= value %>
         </div>
       <% end %>
-
       <%= yield %>
     </div>
   </main>
   <footer>
     <div class="container">
-      <span>Footer</span>
+      <span>Made by Fernando</span>
     </div>
   </footer>
 </body>
