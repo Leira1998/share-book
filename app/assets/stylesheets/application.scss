@@ -19,6 +19,54 @@
 
 a {text-decoration: none !important;}
 
+header {
+  padding: 20px 25px;
+  width: 100%;
+
+  .logo {
+    float: left;
+    font-size: 22px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    font-weight: bold;
+  }
+}
+
+.search-group {
+  float: left;
+  position: relative;
+  margin-left: 50px;
+  width: 550px;
+
+  .search-input {
+    position: relative;
+    padding: 5px;
+    width: 500px;
+    border: 0px;
+    border-bottom: 2px solid #ccc;
+    font-family: 'Arial';
+    font-size: 16px;
+    color: #222;
+
+    transition: border-bottom 1s;
+  }
+  .search-input:focus {
+    outline-style: none;
+    border: 0px;
+    border-bottom: 2px solid #222;
+  }
+  .search-submit {
+    position: relative;
+    padding: 6.25px 12px;
+    margin-left: -2px;
+    background-color: #fff;
+    border: 0px;
+  }
+  .search-submit:active {
+    opacity: .8;
+  }
+}
+
 main {
   width: 100%;
   padding-bottom: 45px;
@@ -30,10 +78,38 @@ footer {
   border-top: 1px solid #ddd;
 
   span {
+    float: left;
+    margin-top: 15px;
     color: #222;
+  }
+
+  .github-link {
+    float: right;
+    border-radius: 100%;
+
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+    }
+  }
+  .github-link:hover {
+    opacity: .8;
   }
 }
 
 @media only screen and (max-width: 800px) {
+  .search-group {
+    margin-top: 15px;
+    margin-left: 0px;
+    width: 100%;
 
+    .search-input {
+      padding-left: 0px;
+      width: 90%;
+    }
+    .search-submit {
+
+    }
+  }
 }

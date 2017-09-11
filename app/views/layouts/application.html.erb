@@ -10,17 +10,15 @@
 <body>
   <header>
     <nav class="navbar">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a href="/books" class="navbar-brand">Share Book</a>
+      <a href="/books" class="logo">Share Book</a>
+      <%= form_tag({controller: "books", action: "search"}, method: "get", class: "search-form") do %>
+        <div class="search-group">
+          <%= text_field_tag :query, "", class: "search-input", placeholder: "Search books, authors, classes..." %>
+          <%= button_tag(type: 'submit', class: "search-submit") do %>
+           <span class="glyphicon glyphicon-search"></span>
+          <% end %>
         </div>
-        <%= form_tag({controller: "books", action: "search"}, method: "get", class: "search-form") do %>
-          <div class="search-group">
-            <%= text_field_tag (:query) %>
-            <%= submit_tag "Search" %>
-          </div>
-        <% end %>
-      </div>
+      <% end %>
     </nav>
   </header>
   <main>
@@ -36,6 +34,7 @@
   <footer>
     <div class="container">
       <span>Made by Fernando</span>
+      <a href="https://github.com/Leira1998/share-book" class="github-link" target="_blank"><img src="../img/github.png" /></a>
     </div>
   </footer>
 </body>

@@ -59,3 +59,6 @@ gem 'jquery-rails'
 # Paperclip gem
 gem "paperclip"
 gem "paperclip-dropbox"
+
+# Seed dump gem
+gem 'seed_dump'
