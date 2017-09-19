@@ -5,9 +5,11 @@ Rails.application.routes.draw do
     end
   end
 
+  # Pages Controller
   root 'pages#home'
   # get '/about', to: 'pages#about'
 
+  # Books Controller
   get '/books', to: 'books#index'
   get '/books/:id', to: 'books#show'
   get '/books/new', to: 'books#new'
