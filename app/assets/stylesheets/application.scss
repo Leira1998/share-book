@@ -17,6 +17,13 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+  background-image: url('/img/bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 a {text-decoration: none !important;}
 
 header {
