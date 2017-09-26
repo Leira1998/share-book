@@ -10,4 +10,10 @@ class Book < ApplicationRecord
 
   #has_attached_file :image, url: "/img/:hash.:extension", hash_secret: "abc123", style: { thumb: ["64x64#", :png], original: ["500x500>", :jpg] }
   #validates_attachment :image, :content_type => { :content_type => ["image/jpg", "image/jpeg", "image/gif", "image/png"] }
+
+  def self.search(search)
+    where("title LIKE ?", "%#{search}%")
+    where("author LIKE ?", "%#{search}%")
+    where("classname LIKE ?", "%#{search}%")
+  end
 end

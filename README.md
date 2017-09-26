@@ -76,9 +76,9 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Ruby on Rails](http://www.dropwizard.io/1.0.2/docs/)
-* [Bootstrap](https://maven.apache.org/)
-* [jQuery](https://rometools.github.io/rome/)
+* [Ruby on Rails](http://rubyonrails.org)
+* [Bootstrap](https://getbootstrap.com)
+* [jQuery](http://jquery.com)
 
 
 ## Versioning

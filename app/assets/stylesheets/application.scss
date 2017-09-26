@@ -16,6 +16,7 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 
 body {
   background-image: url('/img/bg.jpg');
@@ -33,7 +34,7 @@ header {
   .logo {
     float: left;
     font-size: 22px;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Arial', cursive;
     color: #333;
     font-weight: bold;
   }
@@ -49,24 +50,25 @@ header {
     position: relative;
     padding: 5px;
     width: 500px;
+    background-color: transparent;
     border: 0px;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid #888;
     font-family: 'Arial';
     font-size: 16px;
-    color: #222;
-
-    transition: border-bottom 1s;
+    color: #000;
+    //transition: background-color 1s;
   }
   .search-input:focus {
+    background-color: #fff;
     outline-style: none;
     border: 0px;
-    border-bottom: 2px solid #222;
+    border-bottom: 0px solid #ccc;
   }
   .search-submit {
     position: relative;
     padding: 6.25px 12px;
     margin-left: -2px;
-    background-color: #fff;
+    background-color: transparent;
     border: 0px;
   }
   .search-submit:active {
@@ -88,6 +90,7 @@ footer {
     float: left;
     margin-top: 15px;
     color: #222;
+    font-family: 'Roboto';
   }
 
   .github-link {

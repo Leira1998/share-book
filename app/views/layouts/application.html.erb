@@ -13,8 +13,8 @@
       <a href="/books" class="logo">Share Book</a>
       <%= form_tag({controller: "books", action: "search"}, method: "get", class: "search-form") do %>
         <div class="search-group">
-          <%= text_field_tag :query, "", class: "search-input", placeholder: "Search books, authors, classes..." %>
-          <%= button_tag(type: 'submit', class: "search-submit") do %>
+          <%= text_field_tag :search, params[:query], class: "search-input", placeholder: "Search books, authors, classes...", autocomplete: "off" %>
+          <%= button_tag(type: 'submit', class: "search-submit", query: nil) do %>
            <span class="glyphicon glyphicon-search"></span>
           <% end %>
         </div>
@@ -33,7 +33,7 @@
   </main>
   <footer>
     <div class="container">
-      <span>Made by Fernando</span>
+      <span>Made by Fernando Leira</span>
       <a href="https://github.com/Leira1998/share-book" class="github-link" target="_blank"><img src="../img/github.png" /></a>
     </div>
   </footer>
