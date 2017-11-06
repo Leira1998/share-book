@@ -18,6 +18,7 @@ class BooksController < ApplicationController
       flash[:success] = "Book Created!"
       redirect_to @book
     else
+      flash[:error] = "Error Uploading"
       render "new"
     end
   end
@@ -32,6 +33,7 @@ class BooksController < ApplicationController
       flash[:success] = "Book Updated!"
       redirect_to(:action => 'show', :id => @book.id)
     else
+      flash[:error] = "Error Edit"
       render "edit"
     end
   end
@@ -40,7 +42,7 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     @book.destroy
     flash[:success] = "Book Deleted!"
-    redirect_to root_path
+    redirect_to "/books"
   end
 
   def search

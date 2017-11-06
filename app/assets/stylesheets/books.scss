@@ -27,6 +27,14 @@
     color: #222;
     text-align: center;
   }
+
+  .doc-class {
+    margin-top: 2px;
+    font-size: 17px;
+    font-family: "Arial";
+    color: #555;
+    text-align: center;
+  }
 }
 
 .new-doc {
@@ -64,6 +72,8 @@
 }
 
 
-@media only screen and (max-width: 950px) {
-
+@media only screen and (max-width: 800px) {
+  .group-header {
+    text-align: center;
+  }
 }

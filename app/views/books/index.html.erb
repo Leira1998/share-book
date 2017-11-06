@@ -11,6 +11,7 @@
       <%= image_tag(book.document.url, alt: "Document", class: 'doc-thumb') %>
       <br />
       <p class="doc-title"><%= book.title %></p>
+      <p class="doc-class"><%= book.classname %></p>
     </div>
   <% end %>
 </div>
@@ -22,7 +23,7 @@
       <div class="new-doc">
         <span class="glyphicon glyphicon-plus-sign"></span>
         <p>
-          Add your own Book
+          Upload a document
         </p>
       </div>
     <% end %>

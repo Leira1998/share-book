@@ -1,22 +1,10 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
  *= require_tree .
  *= require_self
  */
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 
 body {
   background-image: url('/img/bg.jpg');
@@ -34,7 +22,7 @@ header {
   .logo {
     float: left;
     font-size: 22px;
-    font-family: 'Arial', cursive;
+    font-family: 'Permanent Marker', cursive;
     color: #333;
     font-weight: bold;
   }
@@ -45,24 +33,28 @@ header {
   position: relative;
   margin-left: 50px;
   width: 550px;
+  background-color: #fff;
+  border: 2px solid #888;
+  border-radius: 5px;
 
   .search-input {
     position: relative;
     padding: 5px;
     width: 500px;
-    background-color: transparent;
+    background-color: #fff;
     border: 0px;
-    border-bottom: 2px solid #888;
     font-family: 'Arial';
     font-size: 16px;
+    font-weight: bold;
     color: #000;
-    //transition: background-color 1s;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
   }
   .search-input:focus {
     background-color: #fff;
     outline-style: none;
     border: 0px;
-    border-bottom: 0px solid #ccc;
   }
   .search-submit {
     position: relative;
@@ -70,9 +62,6 @@ header {
     margin-left: -2px;
     background-color: transparent;
     border: 0px;
-  }
-  .search-submit:active {
-    opacity: .8;
   }
 }
 
@@ -84,13 +73,13 @@ main {
 footer {
   width: 100%;
   padding: 20px 0px;
-  border-top: 1px solid #ddd;
 
   span {
     float: left;
     margin-top: 15px;
     color: #222;
-    font-family: 'Roboto';
+    font-size: 16px;
+    font-family: 'Permanent Marker', cursive;
   }
 
   .github-link {
@@ -109,17 +98,39 @@ footer {
 }
 
 @media only screen and (max-width: 800px) {
-  .search-group {
-    margin-top: 15px;
-    margin-left: 0px;
-    width: 100%;
+  header {
+    text-align: center;
 
-    .search-input {
-      padding-left: 0px;
-      width: 90%;
+    .logo {
+      float: none;
     }
-    .search-submit {
+    .search-group {
+      margin-top: 15px;
+      margin-left: 0px;
+      width: 100%;
 
+      .search-input {
+        padding-left: 0px;
+        width: 90%;
+      }
+      .search-submit {
+
+      }
+    }
+  }
+
+  footer {
+    text-align: center;
+
+    span {
+      float: none;
+      display: block;
+    }
+
+    .github-link {
+      margin-top: 25px;
+      float: none;
+      display: block;
     }
   }
 }
