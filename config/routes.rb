@@ -4,10 +4,16 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
+  resources :users
 
   # Pages Controller
   root 'pages#home'
   # get '/about', to: 'pages#about'
+
+  # Users Controller
+  get '/login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
 
   # Books Controller
   get '/books', to: 'books#index'
