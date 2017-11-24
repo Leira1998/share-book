@@ -1,12 +1,41 @@
-// Place all the styles related to the sessions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// Sessions stylesheet
+
+.log {
+  position: relative;
+  margin: 0px auto;
+  width: 500px;
+  height: 50vh;
+
+  h2 {
+    font-size: 38px;
+    font-family: 'Arial';
+    color: #222;
+    font-weight: bold;
+  }
+
+}
+
+.log-input {
+  position: relative;
+  padding: 5px;
+  width: 100%;
+  background-color: #fff;
+  border: 2px;
+  font-family: 'Arial';
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+.log-input:focus {
+  background-color: #fff;
+  outline-style: none;
+}
 
 .btn-submit {
-  color: #FFFFFF;
+  color: #fff;
   font-size: 18px;
-  text-transform: uppercase;
-  background: #c91717;
+  background: #222;
   padding: 10px 20px;
   border: 0;
   margin-top: 6px;

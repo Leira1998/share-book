@@ -8,7 +8,8 @@ Rails.application.routes.draw do
 
   # Pages Controller
   root 'pages#home'
-  # get '/about', to: 'pages#about'
+  get '/about', to: 'pages#about'
+  get '/goodbye', to: 'pages#goodbye'
 
   # Users Controller
   get '/login', to: 'sessions#new'

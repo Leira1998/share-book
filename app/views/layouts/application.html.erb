@@ -13,16 +13,22 @@
 <body>
   <header>
     <nav class="navbar">
+      <!-- Page logo and search bar -->
       <a href="/books" class="logo">Share Book</a>
       <%= form_tag({controller: "books", action: "search"}, method: "get", class: "search-form") do %>
         <div class="search-group">
           <%= text_field_tag :search, params[:query], class: "search-input", placeholder: "Search books, authors, classes...", autocomplete: "off" %>
-          <%= button_tag(type: 'submit', class: "search-submit", query: nil) do %>
+          <%= button_tag(type: 'submit', class: "search-submit") do %>
            <span class="glyphicon glyphicon-search"></span>
           <% end %>
         </div>
       <% end %>
-      <a href="/login" class="log-form">Log In</a>
+      <!-- Sessions Form -->
+      <% if current_user %>
+        <%= link_to "Log Out", logout_path, method: 'delete', class: 'log-form' %>
+      <% else %>
+        <%= link_to "Log In", "/login", class: 'log-form' %>
+      <% end %>
     </nav>
   </header>
   <main>

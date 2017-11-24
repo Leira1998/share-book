@@ -1,6 +1,7 @@
 class BooksController < ApplicationController
 
-  before_action :require_user, only: [:index, :show, :new]
+  before_action :require_user, only: [:index, :show, :new, :search]
+  before_action :require_admin, only: [:destroy]
 
   def index
     @books = Book.order('created_at')
