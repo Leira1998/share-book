@@ -7,11 +7,11 @@ class Book < ApplicationRecord
       :thumb => ["200x200#", :png],
       :medium => ["500x500>", :png]
     },
-    :convert_options => {
+    :convert_options => {r
       :thumb    => '-set colorspace sRGB -strip',
       :medium  => '-set colorspace sRGB -strip'
     }
-    
+
   validates_attachment_content_type :document, :content_type => [
     "application/pdf",
     "application/doc",
