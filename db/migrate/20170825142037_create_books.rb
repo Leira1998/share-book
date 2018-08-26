@@ -5,7 +5,8 @@ class CreateBooks < ActiveRecord::Migration[5.1]
       t.string :author
       t.string :classname
       t.integer :edition
-      t.attachment :document
+      t.string :document
+      t.string :cover
       t.timestamps
     end
   end
