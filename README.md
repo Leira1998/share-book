@@ -89,4 +89,4 @@ Alpha: 0.1
 
 ## Authors
 
-* **Fernando Leira** -  [Leira1998](https://github.com/Leira1998)
+* **Fernando Leira** -  [fernandoleira](https://github.com/fernandoleira)
