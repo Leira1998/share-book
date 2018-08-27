@@ -10,17 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171113133109) do
+ActiveRecord::Schema.define(version: 2018_08_26_194351) do
 
   create_table "books", force: :cascade do |t|
     t.string "title"
     t.string "author"
     t.string "classname"
     t.integer "edition"
-    t.string "document_file_name"
-    t.string "document_content_type"
-    t.integer "document_file_size"
-    t.datetime "document_updated_at"
+    t.string "document"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -31,7 +28,6 @@ ActiveRecord::Schema.define(version: 20171113133109) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "role"
   end
 
 end

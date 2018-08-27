@@ -17,9 +17,9 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'jquery-rails'
 
-# Paperclip gem
-gem "paperclip"
-gem "paperclip-dropbox"
+# Document Uploader
+gem 'carrierwave', '~> 0.10.0'
+gem 'mini_magick', '~> 4.3'
 ```
 
 ### Installing
@@ -89,4 +89,4 @@ Alpha: 0.1
 
 ## Authors
 
-* **Fernando Leira** -  [Leira1998](https://github.com/Leira1998)
+* **Fernando Leira** -  [fernandoleira](https://github.com/fernandoleira)
