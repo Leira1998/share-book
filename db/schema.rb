@@ -18,8 +18,10 @@ ActiveRecord::Schema.define(version: 2018_08_26_194351) do
     t.string "classname"
     t.integer "edition"
     t.string "document"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_books_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

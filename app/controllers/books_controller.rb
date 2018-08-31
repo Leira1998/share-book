@@ -16,11 +16,13 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params)
+    @book.user_id = current_user.id
     if @book.save
       flash[:success] = "Book Created!"
-      redirect_to @book
+      redirect_to book_path(@book)
     else
-      flash[:error] = "Error Uploading"
+      flash[:danger] = "Error Uploading"
+      puts "<---- Error ----> #{@book.errors.full_messages}"
       render "new"
     end
   end
@@ -53,7 +55,7 @@ class BooksController < ApplicationController
 
   private
   def book_params
-    params.require(:book).permit(:title, :author, :classname, :edition, :document)
+    params.require(:book).permit(:title, :author, :classname, :edition, :document, :user_id)
   end
 
 end

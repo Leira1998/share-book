@@ -1,9 +1,7 @@
 class User < ApplicationRecord
 
-  has_secure_password
+  has_many :books
 
-  def admin?
-    self.role == 'admin'
-  end
+  has_secure_password
 
 end

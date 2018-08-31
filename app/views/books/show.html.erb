@@ -18,9 +18,7 @@
       <%= link_to "Download Document", @book.document.url, class: 'btn btn-primary', target: '_blank' %>
 
       <!-- Delete Book available if user is admin -->
-      <% if current_user.admin? %>
-        <%= link_to "Delete Book", book_path(@book), class: 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %>
-      <% end %>
+      <%= link_to "Delete Book", book_path(@book), class: 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %>
 
     </div>
   </div>

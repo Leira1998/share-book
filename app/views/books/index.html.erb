@@ -8,7 +8,7 @@
   <div class="col-md-4">
   <%= link_to book_path(book) do %>
     <div class="doc">
-      <%= image_tag book.document.url(:thumb), alt: "Document", class: 'doc-thumb' %>
+      <%= image_tag(book.document.url, alt: "Document", class: 'doc-thumb') %>
       <br />
       <p class="doc-title"><%= book.title %></p>
       <p class="doc-class"><%= book.classname %></p>
